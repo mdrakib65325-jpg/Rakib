@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b35">
+<title>Freelancer Rakib | Your Online Payment Partner</title>
+<style>
+:root{--navy:#071b35;--blue:#1769e0;--cyan:#20c8d8;--gold:#ffcb4d;--ink:#142238;--muted:#64748b;--bg:#f4f7fb;--white:#fff;--line:#e2e8f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+header{background:linear-gradient(130deg,#06172d,#103f79);color:white;padding:18px 16px 42px;position:relative;overflow:hidden}
+.topbar{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;font-size:18px;letter-spacing:.2px}.tagline{font-size:12px;color:#c9d9ef}
+.menu-wrap{position:relative}.dots{border:1px solid #ffffff60;background:#ffffff14;color:white;font-size:24px;line-height:1;border-radius:12px;width:44px;height:44px;cursor:pointer}
+.menu{display:none;position:absolute;right:0;top:50px;background:white;color:var(--ink);width:220px;padding:8px;border-radius:14px;box-shadow:0 12px 35px #0003;z-index:10}.menu.open{display:block}.menu button{width:100%;border:0;background:white;text-align:left;padding:11px;border-radius:9px;cursor:pointer;color:var(--ink)}.menu button:hover{background:#eef5ff}
+.hero{max-width:1100px;margin:36px auto 0;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}.eyebrow{color:#76e4ed;font-weight:700;font-size:13px}.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.2;margin:10px 0}.hero p{color:#d5e4f7}.price{font-size:28px;font-weight:900;color:var(--gold);margin:14px 0}.price small{font-size:14px;color:#fff;font-weight:600}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer}.primary{background:#22c878;color:#062b1b}.secondary{background:#ffffff18;border:1px solid #ffffff55;color:white}.card-area{display:flex;justify-content:center}.virtual-card{width:min(100%,370px);aspect-ratio:1.59;border-radius:22px;padding:22px;color:white;background:linear-gradient(135deg,#142d55,#087fa7 60%,#1dd0c3);box-shadow:0 22px 45px #0005;position:relative;overflow:hidden}.virtual-card:before{content:"";position:absolute;width:220px;height:220px;border:1px solid #ffffff38;border-radius:50%;right:-70px;top:-75px}.virtual-card:after{content:"";position:absolute;width:160px;height:160px;border:1px solid #ffffff25;border-radius:50%;right:-25px;top:-45px}.card-top,.card-bottom{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}.chip{width:38px;height:29px;border-radius:7px;background:linear-gradient(135deg,#f7e8a8,#bd9e54);margin-top:23px}.card-name{font-size:13px;margin-top:20px;letter-spacing:.8px}.card-number{font-size:16px;letter-spacing:2px;margin-top:7px}.card-bottom{font-size:10px;margin-top:10px;text-transform:uppercase}.mc{font-weight:900;font-style:italic;font-size:18px}.timer{display:inline-flex;align-items:center;gap:8px;background:#ffffff15;border:1px solid #ffffff35;border-radius:12px;padding:8px 12px;font-weight:800;margin-top:12px}
+main{max-width:1100px;margin:26px auto;padding:0 16px}.section{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 25px #0b23400a}.section h2{margin:0 0 12px;color:#0c3264;font-size:23px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.service{background:#f5f8fd;border:1px solid #e8eef7;border-radius:13px;padding:13px;font-size:14px}.service b{display:block;font-size:20px;margin-bottom:4px}.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.benefit{padding:12px;border-radius:12px;background:#effaf5}.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-weight:700;font-size:14px}.field input,.field select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:white}.hint{font-size:12px;color:var(--muted)}.submit{background:var(--blue);color:white;width:100%;margin-top:16px;font-size:16px}.notice{background:#fff7df;border:1px solid #f7df91;border-radius:12px;padding:12px;font-size:13px;margin:12px 0}.success{display:none;background:#e7fff0;border:1px solid #8ce0ac;border-radius:12px;padding:14px;margin-top:14px;overflow-wrap:anywhere}.whatsapp{background:#19b968;color:#062d1b}.foot{background:#06172d;color:#d4e0ef;text-align:center;padding:28px 16px;font-size:13px}.admin-panel{display:none;margin-top:10px;background:#fff;border:1px solid var(--line);padding:16px;border-radius:14px;color:var(--ink)}.admin-panel.open{display:block}.admin-panel h3{margin:0 0 12px}.admin-panel .order-grid{margin-bottom:10px}.admin-panel button{margin-top:10px}.admin-panel input{min-width:0}
+@media(max-width:720px){.hero{grid-template-columns:1fr;margin-top:26px}.card-area{order:-1}.hero h1{font-size:34px}.service-grid{grid-template-columns:repeat(2,1fr)}.benefits,.order-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section{padding:18px}.brand{font-size:16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div><div class="brand">◇ Freelancer Rakib</div><div class="tagline">Your Online Payment Partner</div></div>
+    <div class="menu-wrap">
+      <button class="dots" id="menuButton" aria-label="মেনু খুলুন" aria-expanded="false">⋮</button>
+      <div class="menu" id="menu">
+        <button id="editCard">✎ কার্ডের তথ্য সেট করুন</button>
+        <button id="resetCard">↺ ডেমো কার্ড রিসেট</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero">
+    <div>
+      <div class="eyebrow">💳 INTERNATIONAL VIRTUAL CARD</div>
+      <h1>ইন্টারন্যাশনাল ডুয়েল কারেন্সি<br>MasterCard / VisaCard</h1>
+      <div class="price">🔥 মাত্র ৯৯ টাকায়! <small>(সাথে ১ ডলার ফ্রি)</small></div>
+      <p>ইন্টারন্যাশনাল পেমেন্ট, Facebook/YouTube Boost বা অনলাইন লেনদেনে সমস্যায় পড়ছেন? Reloadable Virtual Visa/MasterCard সম্পর্কে বিস্তারিত জানতে যোগাযোগ করুন।</p>
+      <div class="actions"><a class="btn primary" href="https://wa.me/8801824318448" target="_blank" rel="noopener">WhatsApp করুন</a><a class="btn secondary" href="#services">সার্ভিসসমূহ দেখুন ↓</a></div>
+      <div class="timer">⏳ কার্ড অর্ডার টাইম: <span id="timer">02:00</span></div>
+    </div>
+    <div class="card-area">
+      <div class="virtual-card" aria-label="ডেমো ভার্চুয়াল কার্ড">
+        <div class="card-top"><strong>VIRTUAL</strong><span id="brandTop">MasterCard</span></div>
+        <div class="chip"></div>
+        <div class="card-name" id="cardHolder">CARD HOLDER NAME</div>
+        <div class="card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 0000</div>
+        <div class="card-bottom"><span>EXP <span id="expiry">MM/YY</span><br>CVC <span id="cvc">•••</span></span><span class="mc" id="brandBottom">MasterCard</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="admin-panel" id="adminPanel">
+    <h3>ডেমো কার্ডের তথ্য সম্পাদনা</h3>
+    <p class="hint">শুধু ওয়েবসাইটে দেখানো নমুনা কার্ডের জন্য। বাস্তব কার্ডের CVC বা গোপন তথ্য এখানে লিখবেন না। এই সেটিংস এই ব্রাউজারের মধ্যেই থাকে।</p>
+    <div class="order-grid">
+      <div class="field"><label for="adminHolder">Card holder name</label><input id="adminHolder" placeholder="যেমন: FREELANCER RAKIB" maxlength="40"></div>
+      <div class="field"><label for="adminCvc">CVC (ডেমো)</label><input id="adminCvc" placeholder="•••" maxlength="3" inputmode="numeric"></div>
+      <div class="field"><label for="adminExpiry">Exper / date</label><input id="adminExpiry" placeholder="MM/YY" maxlength="5"></div>
+      <div class="field"><label for="adminBrand">Card brand</label><select id="adminBrand"><option>MasterCard</option><option>Visa</option></select></div>
+    </div>
+    <button class="btn submit" id="saveCard" type="button">কার্ডের তথ্য আপডেট করুন</button>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="services">
+    <h2>⭐ কার্ড দিয়ে যেসব কাজ করা যাবে</h2>
+    <div class="service-grid">
+      <div class="service"><b>💼</b>Fiverr, Upwork, Freelancerসহ বিভিন্ন অনলাইন প্ল্যাটফর্মে পেমেন্ট/লেনদেন</div>
+      <div class="service"><b>📢</b>Facebook, Google, YouTube ও TikTok-এ Ads চালানো</div>
+      <div class="service"><b>⭐</b>Facebook Stars কেনা</div>
+      <div class="service"><b>🎮</b>বিভিন্ন Console Account-এর পেমেন্ট</div>
+      <div class="service"><b>📱</b>Facebook Page ও অন্যান্য সোশ্যাল মিডিয়া প্রমোট করা</div>
+      <div class="service"><b>🌐</b>বিভিন্ন ওয়েবসাইটে অনলাইন পেমেন্ট</div>
+      <div class="service"><b>🖥️</b>Domain ও Hosting কেনা</div>
+      <div class="service"><b>🕹️</b>Free Fire / PUBG-সহ বিভিন্ন গেমে ইন-গেম পেমেন্ট</div>
+      <div class="service"><b>▶️</b>Google Play Store থেকে অ্যাপ বা গেম কেনা</div>
+      <div class="service"><b>🛡️</b>VPN / Proxy সার্ভিসের পেমেন্ট</div>
+      <div class="service"><b>🎨</b>বিভিন্ন Theme ও Digital Service কেনা</div>
+      <div class="service"><b>💳</b>Visa/MasterCard গ্রহণ করে এমন অন্যান্য অনলাইন সেবায় পেমেন্ট</div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>🛡️ কার্ডের সুবিধা</h2>
+    <div class="benefits">
+      <div class="benefit">📅 মেয়াদ: ৫ বছর (ইস্যুকারীর শর্ত অনুযায়ী)</div>
+      <div class="benefit">🔄 Reloadable সুবিধা</div>
+      <div class="benefit">💸 বিকাশ / নগদ / Binance-এর মাধ্যমে ডলার লোডের সুবিধা</div>
+      <div class="benefit">➕ প্রয়োজন অনুযায়ী পুনরায় ব্যালেন্স যোগ করার সুবিধা</div>
+    </div>
+    <div class="notice">কার্ডের যোগ্যতা, ব্যবহার, ফি, মেয়াদ ও কোন সেবায় পেমেন্ট হবে—এসব কার্ড ইস্যুকারী এবং সংশ্লিষ্ট প্ল্যাটফর্মের নিয়মের ওপর নির্ভর করে। অর্ডার করার আগে শর্ত নিশ্চিত করুন।</div>
+    <p>📩 কার্ড নিতে বা বিস্তারিত জানতে এখনই WhatsApp করুন। আপনার অনলাইন পেমেন্টকে আরও সহজ করতে আজই সংগ্রহ করুন আপনার Reloadable Virtual Visa/MasterCard.</p>
+    <a class="btn whatsapp" href="https://wa.me/8801824318448" target="_blank" rel="noopener">WhatsApp-এ যোগাযোগ করুন · +8801824-318448</a>
+  </section>
+  <section class="section" id="order">
+    <h2>📝 অর্ডার করতে যা যা লাগবে</h2>
+    <form id="orderForm">
+      <div class="order-grid">
+        <div class="field"><label for="name">নাম *</label><input id="name" name="name" placeholder="আপনার পূর্ণ নাম" required maxlength="100"></div>
+        <div class="field"><label for="email">জিমেইল *</label><input id="email" name="email" type="email" placeholder="আপনার Gmail ঠিকানা" required></div>
+        <div class="field"><label for="phone">ফোন নম্বর *</label><input id="phone" name="phone" type="tel" placeholder="আপনার ফোন নাম্বার" required></div>
+        <div class="field"><label>পেমেন্ট পদ্ধতি *</label><select id="paymentMethod" required><option value="">বেছে নিন</option><option>bKash</option><option>Nagad</option></select></div>
+        <div class="field full"><label>পেমেন্টের তথ্য</label><div class="notice">এই নাম্বারে ৯৯ টাকা Send Money করুন: <strong>বিকাশ / নগদ — 01978-365292</strong><br>পেমেন্ট করার পর Transaction ID কপি করে নিচের ঘরে বসান।</div></div>
+        <div class="field full"><label for="trx">Transaction ID *</label><input id="trx" name="trx" placeholder="আপনার Transaction ID লিখুন" required maxlength="100"></div>
+      </div>
+      <p class="hint">এই ডেমো ফর্মে তথ্য সার্ভারে পাঠানো বা সংরক্ষণ করা হয় না। লাইভ অর্ডার গ্রহণের জন্য নিরাপদ ব্যাকএন্ড/ফর্ম সার্ভিস সংযোগ করতে হবে।</p>
+      <button class="btn submit" type="submit">Submit · অর্ডার পাঠান</button>
+    </form>
+    <div class="success" id="success"></div>
+  </section>
+</main>
+<footer class="foot">
+  <strong>◇ Freelancer Rakib</strong><br>Your Online Payment Partner<br>🔒 নিরাপদ লেনদেন · ⚡ দ্রুত সার্ভিস · ☎ ২৪/৭ সাপোর্ট<br><br>© 2026 Freelancer Rakib. All Rights Reserved.
+</footer>
+<script>
+const menuButton=document.getElementById('menuButton'), menu=document.getElementById('menu'), panel=document.getElementById('adminPanel');
+menuButton.addEventListener('click',()=>{menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',menu.classList.contains('open')?'true':'false')});
+document.getElementById('editCard').addEventListener('click',()=>{panel.classList.toggle('open');menu.classList.remove('open');panel.scrollIntoView({behavior:'smooth',block:'center'})});
+const fields={holder:document.getElementById('adminHolder'),cvc:document.getElementById('adminCvc'),expiry:document.getElementById('adminExpiry'),brand:document.getElementById('adminBrand')};
+function applyCard(data){document.getElementById('cardHolder').textContent=(data.holder||'CARD HOLDER NAME').toUpperCase();document.getElementById('cvc').textContent=data.cvc||'•••';document.getElementById('expiry').textContent=data.expiry||'MM/YY';document.getElementById('brandTop').textContent=data.brand||'MasterCard';document.getElementById('brandBottom').textContent=data.brand||'MasterCard'}
+document.getElementById('saveCard').addEventListener('click',()=>{const data={holder:fields.holder.value.trim(),cvc:fields.cvc.value.replace(/\D/g,'').slice(0,3),expiry:fields.expiry.value.trim(),brand:fields.brand.value};applyCard(data);try{localStorage.setItem('frDemoCard',JSON.stringify({...data,cvc:''}))}catch(e){};fields.cvc.value='';alert('ডেমো কার্ডের তথ্য আপডেট হয়েছে। CVC স্থায়ীভাবে সংরক্ষণ করা হয়নি।')});
+document.getElementById('resetCard').addEventListener('click',()=>{applyCard({});fields.holder.value='';fields.cvc.value='';fields.expiry.value='';fields.brand.value='MasterCard';try{localStorage.removeItem('frDemoCard')}catch(e){};menu.classList.remove('open')});
+try{const saved=localStorage.getItem('frDemoCard');if(saved){const data=JSON.parse(saved);applyCard(data);fields.holder.value=data.holder||'';fields.expiry.value=data.expiry||'';fields.brand.value=data.brand||'MasterCard'}}catch(e){}
+let seconds=120;const timer=document.getElementById('timer');function tick(){const m=String(Math.floor(seconds/60)).padStart(2,'0'),s=String(seconds%60).padStart(2,'0');timer.textContent=m+':'+s;if(seconds>0)seconds--;else{clearInterval(clock);timer.textContent='00:00'}}tick();const clock=setInterval(tick,1000);
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim();const trx=document.getElementById('trx').value.trim();const msg=`আসসালামু আলাইকুম, আমি ভার্চুয়াল কার্ড অর্ডার করতে চাই।%0Aনাম: ${encodeURIComponent(name)}%0ATransaction ID: ${encodeURIComponent(trx)}%0Aঅনুগ্রহ করে অর্ডার যাচাই করুন।`;const out=document.getElementById('success');out.style.display='block';out.innerHTML='আপনার তথ্য প্রস্তুত হয়েছে। WhatsApp-এ পাঠিয়ে অর্ডার সম্পন্ন করতে নিচের লিংকে চাপ দিন।<br><br><a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/8801824318448?text='+msg+'">WhatsApp-এ অর্ডার পাঠান</a>';out.scrollIntoView({behavior:'smooth',block:'center'})});
+</script>
+</body>
+</html>
